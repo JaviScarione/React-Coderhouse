@@ -6,14 +6,8 @@ import "./CartWidget.css";
 const CartWidget = ({ cartItems }) => {
   return (
     <div className="container-icon">
-      <a href="/">
-        <span className="count-products">{cartItems}</span>
-        <FontAwesomeIcon
-          className="cart_icon"
-          icon={faCartShopping}
-          size="xl"
-        />
-      </a>
+      <button className="btn"><FontAwesomeIcon className="cart_icon" icon={faCartShopping} size="xl" /></button>
+      <p className="count-products">{cartItems}</p>
     </div>
   );
 };

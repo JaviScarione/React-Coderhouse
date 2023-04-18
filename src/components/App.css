@@ -1,3 +1,20 @@
 .App {
   text-align: center;
+  font-family: 'Lexend', sans-serif;
+}
+
+.card {
+  margin: 110px 5px 5px 5px;
+}
+
+.card:hover {
+  filter:  drop-shadow(0 0 5px grey) ;
+}
+
+.itemDetail {
+  max-width: 740px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter:  drop-shadow(0 0 5px grey) ;
 }

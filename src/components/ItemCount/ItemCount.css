@@ -1,0 +1,21 @@
+.itemCount .agregar {
+    background-color:green;
+    color: whitesmoke;
+    transition: all 300ms ease-in-out;
+}
+
+.itemCount .agregar:hover {
+    background-color:darkgreen;
+    color: whitesmoke;
+}
+
+.itemCount .reset {
+    background-color:firebrick;
+    color: whitesmoke;
+    transition: all 300ms ease-in-out;
+}
+
+.itemCount .reset:hover {
+    background-color:maroon;
+    color: whitesmoke;
+}
