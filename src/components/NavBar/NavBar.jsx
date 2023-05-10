@@ -5,7 +5,7 @@ import { faHouse, faLaptop, faMobilePhone, faTv, faHeadphones } from "@fortaweso
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import CartWidget from "../CartWidget/CartWidget.jsx";
+import { CartWidget } from "../CartWidget/CartWidget.jsx";
 
 export const NavBar = () => {
  
@@ -13,7 +13,7 @@ export const NavBar = () => {
       <Navbar expand="lg" className="navbar" variant="dark">
         <Container className="cont">
           <Navbar.Brand href="/">
-            <img src="../assets/images/Logo.png" alt="Logo" className="logo" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/carritoapp-react.appspot.com/o/Logo.png?alt=media&token=5da01fb2-9c5c-47b2-9ef1-198eeeca600e" alt="Logo" className="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbaScroll" />
           <Navbar.Collapse id="navbarScroll" className="colapse">
@@ -34,7 +34,7 @@ export const NavBar = () => {
               <FontAwesomeIcon className="navbar-icon" icon={faHeadphones} />Sonido
               </Nav.Link>
             </Nav>
-            <CartWidget cartItems={7} />
+            <CartWidget />
           </Navbar.Collapse>
         </Container>
       </Navbar>

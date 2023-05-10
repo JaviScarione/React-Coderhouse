@@ -1,9 +1,11 @@
-import { ItemCount } from "../ItemCount/ItemCount"
-export const ItemDetail = ({ item }) => {
+import { ItemCount } from "../ItemCount/ItemCount";
+import { useCartContext } from "../../context/CartContext.js";
 
+export const ItemDetail = ({ item }) => {
+    const { addItem } = useCartContext()
+    
     const onAdd = (contador) => {
-        console.log(contador)
-        console.log(item)
+        addItem(item, contador)
     }
 
     return (
