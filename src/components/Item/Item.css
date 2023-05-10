@@ -1,0 +1,7 @@
+.card {
+    margin: 10px 5px 5px 5px;
+  }
+  
+  .card:hover {
+    filter:  drop-shadow(0 0 5px grey) ;
+  }

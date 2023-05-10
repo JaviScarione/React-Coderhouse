@@ -12,8 +12,8 @@ export const ItemDetailContainer = () => {
         fetch('../json/productos.json')
             .then(response => response.json())
             .then(productos => {
-                const producto = productos.find(producto => producto.id === parseInt(id))
-                setItem(producto)
+                const product = productos.find(prod => prod.id === parseInt(id))
+                setItem(product)
             })
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

@@ -4,35 +4,28 @@ const CartContext = createContext()
 
 export const useCartContext = () => useContext(CartContext) 
 
-export const CartProvider = (props) => {
+const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
 
     const isInCart = (id) => {
-        return cart.some(prod => prod.id === id)
+        return cart.some(product => product.id === id)
     }
 
     const addItem = (item, quantity) => {
-        alert("entro")
         if (isInCart(item.id)) {
-            const index = cart.findIndex(prod => prod.id === item.id)
-            const aux = [...cart]
-            aux[index].quantity = quantity
-            setCart(aux)
+            setCart (cart.map(product =>{
+                return product.id === item.id ?{...product, quantity: product.quantity + quantity} : product
+              }));
+    
         } else {
-            const newItem = {
-                ...item,
-                quantity: quantity
-            }
-            setCart([...cart, newItem])
+            setCart ([...cart,{...item,quantity}]);
         }
     }
 
     const removeItem = (id) => {
         setCart(cart.filter(prod => prod.id !== id))
     }
-
-    console.log(cart);
 
     const emptyCart = () => {
         setCart([])
@@ -46,9 +39,14 @@ export const CartProvider = (props) => {
         return cart.reduce((acum, prod) => acum += (prod.quantity * prod.precio), 0)
     }
 
+    console.log(cart);
+
+
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, emptyCart, totalPrice, getItemQuantity }}>
-            {props.children}
+            {children}
         </CartContext.Provider>
     )
 }
+
+export default CartProvider;

@@ -16,7 +16,6 @@ export const ItemListContainer = () => {
         .then(productos => {
           const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === id)
           setProductos(productosFiltrados)
-
         })
     } else {
       fetch('./json/productos.json')
@@ -24,7 +23,6 @@ export const ItemListContainer = () => {
         .then(productos => {
           const productosFiltrados = productos.filter(prod => prod.stock > 0)
           setProductos(productosFiltrados)
-
         })
     }
 
