@@ -1,3 +1,16 @@
+.itemCount {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+    text-align: center;
+}
+
 .itemCount .agregar {
     background-color:green;
     color: whitesmoke;
@@ -19,3 +32,21 @@
     background-color:maroon;
     color: whitesmoke;
 }
+
+@media screen and (max-width: 575px) {
+    .itemCount {
+        width: 100%;
+    }
+
+    .buttons {
+        justify-content: center; 
+        margin: auto; 
+    }
+
+    .itemCount .agregar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }

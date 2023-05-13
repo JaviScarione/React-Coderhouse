@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react"
-import { ItemDetail } from "../ItemDetail/ItemDetail"
-import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { ItemDetail } from "../ItemDetail/ItemDetail.jsx";
+import { useParams } from "react-router-dom";
+import { getProduct } from "../../firebase/firebase.js";
+import "./ItemDetailContainer.css";
+
 
 
 export const ItemDetailContainer = () => {
@@ -9,17 +12,12 @@ export const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch('../json/productos.json')
-            .then(response => response.json())
-            .then(productos => {
-                const product = productos.find(prod => prod.id === parseInt(id))
-                setItem(product)
-            })
+        getProduct(id).then(product => setItem(product))
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
-        <div className="mt-3 container itemDetail">
+        <div className="my-3 container itemDetail">
             <div className="itemDetail card">
                 <ItemDetail item={item} />
             </div>

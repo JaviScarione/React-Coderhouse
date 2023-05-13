@@ -1,0 +1,15 @@
+.itemDetail {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter:  drop-shadow(0 0 5px grey) ;
+  }
+
+  @media screen and (max-width: 575px) {
+    .itemDetail {
+      width: 90%;
+      height: auto;
+    }
+  }

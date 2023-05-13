@@ -1,0 +1,43 @@
+.error .back:hover {
+    color: green;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+.form {
+    width: 100%;
+    border: 2px solid #505050;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.form .finish {
+    min-width: 30%;
+    color: white;
+    background: green;
+    transition: all 300ms ease-in-out;
+}
+
+.form .finish:hover {
+    background: white;
+    border: 2px solid green;
+    color: #505050;
+}
+
+.emailError {
+    border: 1px solid firebrick !important;
+    color: firebrick !important;
+}
+
+.no-buttons::-webkit-outer-spin-button,
+.no-buttons::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,47 @@
+.cartImg {
+    object-fit: contain;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.row .remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: #505050;
+    transition: all 300ms ease-in-out;
+}
+
+.row .remove:hover {
+    color: firebrick;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 575px) {
+    .row .remove {
+        font-size: 8px;
+    }
+
+    .cartImg {
+        width: 100%;
+    }
+
+    .description, .description h6 {
+        text-align: start;
+        font-size: 8px;
+    }
+
+    .row h5 {
+        font-size: 12px;
+    }
+  }

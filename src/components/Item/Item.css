@@ -1,7 +1,35 @@
-.card {
+  .cardItem {
     margin: 10px 5px 5px 5px;
   }
   
-  .card:hover {
+  .cardItem:hover {
     filter:  drop-shadow(0 0 5px grey) ;
+  }
+
+  .link {
+    height: 100%;
+    width: 100%;
+  }
+
+  .itemImg {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 575px) {
+    .cardItem {
+      max-height: 250px;
+    }
+
+    .itemImg {
+      height: 30%;
+      object-fit: contain;
+      margin-top: 15px;
+    }
+
+    .card-body {
+      width: 100%;
+      height: 70%;
+    }
   }

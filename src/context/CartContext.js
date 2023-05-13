@@ -14,12 +14,17 @@ const CartProvider = ({children}) => {
 
     const addItem = (item, quantity) => {
         if (isInCart(item.id)) {
-            setCart (cart.map(product =>{
-                return product.id === item.id ?{...product, quantity: product.quantity + quantity} : product
-              }));
+            const indice = cart.findIndex(prod => prod.id === item.id)
+            const aux = [...cart]
+            aux[indice].quantity = quantity
+            setCart(aux)
     
         } else {
-            setCart ([...cart,{...item,quantity}]);
+            const newItem = {
+                ...item,
+                quantity: quantity 
+            }
+            setCart([...cart, newItem])
         }
     }
 
@@ -38,9 +43,6 @@ const CartProvider = ({children}) => {
     const totalPrice = () => {
         return cart.reduce((acum, prod) => acum += (prod.quantity * prod.precio), 0)
     }
-
-    console.log(cart);
-
 
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, emptyCart, totalPrice, getItemQuantity }}>

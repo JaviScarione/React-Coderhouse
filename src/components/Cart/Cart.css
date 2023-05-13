@@ -1,0 +1,119 @@
+.empty .back:hover {
+    color: green;
+}
+
+.items {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    overflow-y: scroll; 
+}
+
+.items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.items::-webkit-scrollbar-thumb {
+    background: firebrick;
+    border-radius: 4px;
+}
+
+
+.cardCart {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 250px);
+    width: 100%;
+    border-radius: 20px;
+    padding: 0;
+    filter:  drop-shadow(0 0 5px grey) ;
+  }
+
+.total .continue {
+    margin: 0 15px 0 15px;
+    color: white;
+    background: #505050;
+    transition: all 300ms ease-in-out;
+}
+
+.total .continue:hover {
+    background: #505050;
+    color: green;
+}
+
+.total .clearCart {
+    color: #505050;
+    transition: color 300ms ease-in-out;
+}
+
+.total .clearCart:hover {
+    color: firebrick;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+    border-top: 2px solid firebrick;
+} 
+
+.total .totalContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.total h4 {
+    margin: 0 50px 0 auto;
+}
+
+.cardCart .finish {
+    font-size: 20px;
+    height: 50px;
+    margin: 0 50px 0 auto;
+    color: white;
+    background: green;
+    transition: all 300ms ease-in-out;
+}
+
+.cardCart .finish:hover {
+    background: white;
+    border: 2px solid green;
+    color: #505050;
+    box-shadow: 0 0 10px #505050;
+}
+
+@media screen and (max-width: 575px) {
+    .cardCart {
+        max-width: 90%;
+    }
+
+    .totalContainer {
+        flex-direction: column;
+    }
+
+    .totalContainer .continue {
+        font-size: 12px;
+    }
+
+    .totalContainer .clearCart {
+        font-size: 12px;
+    }
+
+    .total h4 {
+        font-size: 20px;
+        margin: 0 10px 0 auto;
+    }
+
+    .cardCart .finish {
+        font-size: 16px;
+        margin: 0 15px 0 auto;
+        width: 100%;
+        color: white;
+        background: green;
+        transition: all 300ms ease-in-out;
+    }
+  }

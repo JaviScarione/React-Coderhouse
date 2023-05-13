@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import { getProducts } from '../../firebase/firebase';
 
 
 export const ItemListContainer = () => {
@@ -11,25 +12,23 @@ export const ItemListContainer = () => {
   useEffect(() => {
 
     if (id) { 
-      fetch('../json/productos.json')
-        .then(response => response.json())
-        .then(productos => {
-          const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === id)
-          setProductos(productosFiltrados)
-        })
+      getProducts()
+      .then(productos => {
+        const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === id)
+        setProductos(productosFiltrados)
+      })
     } else {
-      fetch('./json/productos.json')
-        .then(response => response.json())
-        .then(productos => {
-          const productosFiltrados = productos.filter(prod => prod.stock > 0)
-          setProductos(productosFiltrados)
-        })
+      getProducts()
+      .then(productos => {
+        const productosFiltrados = productos.filter(prod => prod.stock > 0)
+        setProductos(productosFiltrados)
+      })
     }
 
   }, [id])
 
   return (
-    <div className="container mt-3">
+    <div className="container my-3">
       {<ItemList productos={productos} />}
     </div>
   )
