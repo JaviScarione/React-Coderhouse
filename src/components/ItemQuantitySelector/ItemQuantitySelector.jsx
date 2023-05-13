@@ -1,5 +1,5 @@
 import { useCount } from "../../hooks/useCount.js"
-import "./ItemCount.css";
+import "./ItemQuantitySelector.css";
 
 export const ItemCount = ({ ValInicial, min, max, onAdd }) => {
 

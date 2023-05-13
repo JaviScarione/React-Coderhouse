@@ -6,22 +6,22 @@ import { getProducts } from '../../firebase/firebase';
 
 export const ItemListContainer = () => {
 
-  const [productos, setProductos] = useState([])
+  const [products, setProductos] = useState([])
   const { id } = useParams()
 
   useEffect(() => {
 
     if (id) { 
       getProducts()
-      .then(productos => {
-        const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.categoria === id)
-        setProductos(productosFiltrados)
+      .then(products => {
+        const filterProducts = products.filter(prod => prod.stock > 0).filter(prod => prod.categoria === id)
+        setProductos(filterProducts)
       })
     } else {
       getProducts()
       .then(productos => {
-        const productosFiltrados = productos.filter(prod => prod.stock > 0)
-        setProductos(productosFiltrados)
+        const filterProducts = productos.filter(prod => prod.stock > 0)
+        setProductos(filterProducts)
       })
     }
 
@@ -29,7 +29,7 @@ export const ItemListContainer = () => {
 
   return (
     <div className="container my-3">
-      {<ItemList productos={productos} />}
+      {<ItemList products={products} />}
     </div>
   )
 }

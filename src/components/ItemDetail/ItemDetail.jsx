@@ -1,4 +1,4 @@
-import { ItemCount } from "../ItemCount/ItemCount";
+import { ItemCount } from "../ItemQuantitySelector/ItemQuantitySelector.jsx";
 import { useCartContext } from "../../context/CartContext.js";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,8 @@ export const ItemDetail = ({ item }) => {
         addItem(item, contador)
         toast.success('Producto agregado al 🛒', {
             position: "top-right",
-            autoClose: 1500,
+            destination: "/cart",
+            autoClose: 2000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: false,

@@ -37,7 +37,7 @@ export const Checkout = () => {
                 } else {
                     toast.error('La cantidad pedida supera el stock disponible', {
                         position: "top-right",
-                        autoClose: 3000,
+                        autoClose: 2000,
                         hideProgressBar: true,
                         closeOnClick: true,
                         pauseOnHover: false,

@@ -50,7 +50,7 @@ export const Cart = () => {
                 <div className="g-2 m-2">
                     <div className="items">
                         <div>
-                        {<ItemList productos={cart} template={"ItemCart"} />}
+                        {<ItemList products={cart} template={"ItemCart"} />}
                         </div>
                     </div>
                 </div>
