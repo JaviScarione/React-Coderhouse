@@ -1,6 +1,9 @@
 import {useState, useEffect} from 'react';
-import { ItemList } from "../ItemList/ItemList"
+
 import { useParams } from "react-router-dom"
+
+import { ItemList } from "../ItemList/ItemList.jsx"
+
 import { getProducts } from '../../firebase/firebase';
 
 
@@ -29,7 +32,7 @@ export const ItemListContainer = () => {
 
   return (
     <div className="container my-3">
-      {<ItemList products={products} />}
+      {<ItemList products={products} template={"Item"} />}
     </div>
   )
 }

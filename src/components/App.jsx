@@ -1,13 +1,16 @@
 import './App.css';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { NavBar } from './NavBar/NavBar.jsx';
 import { ItemListContainer } from './ItemListContainer/ItemListContainer.jsx'
 import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer.jsx';
 import { Cart } from './Cart/Cart.jsx';
 import { Checkout } from './Checkout/Checkout.jsx';
 import { Footer } from './Footer/Footer.jsx';
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 //import { createProducts } from '../firebase/firebase.js';
 

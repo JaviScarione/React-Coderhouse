@@ -4,7 +4,7 @@
 
 ## Requerimientos
 
-*Instalación de React mediante instalador y sus dependencias*
+*Instalación de React mediante su instalador y además sus dependencias:*
 
 ```
 npm i @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome bootstrap firebase react-bootstrap react-router-dom react-toastify reactstrap sweetalert2 sweetalert2-react-content
@@ -18,9 +18,9 @@ ___
 ```
 npm start
 ```
-*Luego ingrese al siguiente link para visualizar la aplicación:* [Tiendas JS](http://localhost:3000)
+*La aplicación se ejecutará de manera automática en [Localhost](http://localhost:3000"Localhost")*
 
-*La primera visualización debería ser la siguiente:*
+*La primera visualización es la siguiente:*
 
 ![Inicio de Tiendas JS](https://firebasestorage.googleapis.com/v0/b/carritoapp-react.appspot.com/o/inicio.png?alt=media&token=ed9978fa-009d-413e-a947-cb797e387e9d)
 ___

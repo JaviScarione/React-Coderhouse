@@ -1,12 +1,15 @@
 import "./NavBar.css";
+
+import { useState, memo } from "react";
+
+import { CartWidget } from "../CartWidget/CartWidget.jsx";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faLaptop, faMobilePhone, faTv, faHeadphones } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { CartWidget } from "../CartWidget/CartWidget.jsx";
-import { useState, memo } from "react";
 
 export const NavBar = memo(() => {
 
